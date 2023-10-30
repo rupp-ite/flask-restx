@@ -1,5 +1,4 @@
 flask==2.3.3
 flask-restx
 flask-sqlalchemy
-psycopg2
 psycopg2-binary
