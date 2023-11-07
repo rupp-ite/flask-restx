@@ -77,7 +77,8 @@ class ManageGender(Resource):
         if gender:
             db.session.delete(gender)
             db.session.commit()
-            return 'Not workding'
+            return {"message": f"Item {id} has been deleted"}, 204
+        api.abort(404, f"Item {id} not found")
 
 if __name__=='__main__':
     app.run()
